@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.ReloadActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_product_details"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:paddingTop="@dimen/margin_10dp"
+        android:paddingRight="@dimen/margin_10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_left"
+                android:tint="@color/white" />
+
+            <TextView
+                style="@style/TextViewReload"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_toRightOf="@+id/img_back"
+                android:text="My Biddings" />
+
+            <RelativeLayout
+                android:id="@+id/section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:background="@drawable/rounded_solid_white_max_radius">
+
+                <include
+                    android:id="@+id/points_layout"
+                    layout="@layout/points_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <TextView
+                    android:id="@+id/walletPoint"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/price_pt"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="-15dp"
+                android:background="@drawable/circle_solid_white"
+                android:src="@drawable/ic_add" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_edit_layout"
+        android:layout_below="@+id/rl_tool">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_img"
+                        android:layout_width="100dp"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true">
+
+                        <RelativeLayout
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:background="@drawable/black_rounded_rect">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="1dp"
+                                app:cardBackgroundColor="@color/black"
+                                app:cardCornerRadius="8dp">
+
+                                <ImageView
+                                    android:id="@+id/img_product_thumbnail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/dummy_img"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/img_sold_out"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/sold_out_2x"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/more"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginRight="@dimen/margin_5dp"
+                        android:src="@drawable/ic_more_horiz" />
+
+                    <ImageView
+                        android:id="@+id/img_speaker"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="@dimen/margin_5dp"
+                        android:src="@drawable/speaker"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Apple Iphones XS 64GB"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/rm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_name"
+                    android:layout_marginTop="10dp"
+                    android:text="My Bid"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/bid_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rm"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="RM 1699.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2"
+                        android:visibility="invisible"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="10"
+                        android:progressDrawable="@drawable/progressbar_rounded_corner"
+                        android:progressTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/_seconds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="00 : 00 : 00"
+                        android:fontFamily="@font/rubik_bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_sold"
+                        android:layout_width="120dp"
+                        android:layout_height="25dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="@dimen/margin_15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:text="sold"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewWinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_5dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/margin_15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/margin_10dp"
+                    android:paddingRight="@dimen/margin_10dp"
+                    android:paddingBottom="@dimen/margin_10dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Michael Lim"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_13dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bidRecords"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_edit_layout"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/round_top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_10dp"
+                android:paddingLeft="@dimen/margin_15dp"
+                android:paddingRight="@dimen/margin_15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet Balance"
+                    android:textSize="@dimen/size_14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/rubik_regular"/>
+
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/section2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_solid_white_max_radius">
+
+                    <include
+                        android:id="@+id/points_layout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        layout="@layout/points_layout" />
+
+                    <TextView
+                        android:id="@+id/points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingRight="0dp"
+                        android:layout_toRightOf="@+id/points_layout"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="@dimen/size_18dp"
+                        android:textColor="@color/colorPrimary"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rl_bid"
+                    android:layout_below="@+id/section2"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/rectangle"
+                        android:background="@drawable/rounded_solid_primary_max_radius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/tv_bidPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:inputType="numberDecimal"
+                                android:maxLength="8"
+                                android:fontFamily="@font/rubik_medium"
+                                android:background="@null"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="12789.02 RM"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+                                android:imeOptions="actionDone"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_seekBar"
+                        android:layout_below="@+id/rectangle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20dp">
+
+                        <androidx.appcompat.widget.AppCompatSeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="15dp"
+                            android:maxHeight="10dp"
+                            android:progressDrawable="@drawable/seekbar_drawable_progress"
+                            android:layout_marginBottom="10dp"
+                            android:splitTrack="false"
+                            android:progress="0"
+                            android:progressTint="@color/colorPrimary"
+                            android:thumb="@drawable/seek_bar_slider"/>
+
+                        <TextView
+                            android:id="@+id/tv_currentPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/seekBar"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="2dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_directPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/seekBar"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/margin_15dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_bottom"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_placeBid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/size_10dp"
+                    android:text="Place new Bid"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/size_18dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    style="?android:attr/progressBarStyle"
+                    android:visibility="gone"
+                    android:indeterminateTint="@color/white"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/ll_activeCancelled"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:weightSum="3"-->
+<!--        android:background="@color/white"-->
+<!--        android:padding="@dimen/margin_10dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="*"-->
+<!--                android:visibility="gone"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/bid_active" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Active Bid"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_marginLeft="-5dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/bid_cancelled" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Cancelled Bid"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="right">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/direct_checkout" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Purchased"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

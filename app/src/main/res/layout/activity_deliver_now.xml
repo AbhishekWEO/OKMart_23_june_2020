@@ -1,0 +1,448 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/background_top"
+        android:paddingTop="@dimen/margin_20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_point"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:gravity="end">
+
+            <RelativeLayout
+                android:id="@+id/section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_solid_white_max_radius">
+
+                <include
+                    android:id="@+id/points_layout"
+                    layout="@layout/points_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp" />
+
+                <TextView
+                    android:id="@+id/walletPoint"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBarWalletPoints"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/colorPrimaryDark" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/price_pt"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="-15dp"
+                android:layout_toRightOf="@+id/section"
+                android:background="@drawable/circle_solid_white"
+                android:src="@drawable/ic_add" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_deliver_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Deliver Now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_20dp"
+            android:layout_toRightOf="@+id/img_back"
+            android:fontFamily="@font/rubik_medium"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/arrow_left"
+            android:tint="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-5dp"
+            android:weightSum="2">
+
+            <!--            android:layout_below="@+id/rl_point"-->
+            <!--            android:layout_marginTop="40dp"-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:textSize="@dimen/size_15dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <ImageView
+                    android:id="@+id/delivery_dot_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/semi_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_successful"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_self_pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Self Pickup"
+                    android:textSize="@dimen/size_15dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_regular"/>
+
+                <ImageView
+                    android:id="@+id/self_pickup_dot_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/semi_circle"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_tool">
+
+        <RelativeLayout
+            android:id="@+id/rl_product_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="invisible"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="100dp"
+                android:text=""
+                android:textSize="@dimen/size_16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_solid_white_max_radius">
+
+                <!--                <include-->
+                <!--                    android:id="@+id/points_layout"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    layout="@layout/points_layout" />-->
+
+                <TextView
+                    android:id="@+id/bid_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="0dp"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_shipping_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@color/white"
+            android:visibility="invisible"
+            android:layout_below="@+id/rl_product_details">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Shipping fee"
+                android:textSize="@dimen/size_16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_solid_white_max_radius">
+
+                <!--                <include-->
+                <!--                    android:id="@+id/points_layout"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    layout="@layout/points_layout" />-->
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="0dp"
+                    android:layout_centerVertical="true"
+                    android:text="1800.00"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarTop"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_address_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:visibility="invisible"
+        android:layout_marginTop="2dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/mediumGrey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerVertical="true"
+            android:text="@string/please_select_your_address_for_product_delivery"
+            android:id="@+id/tv_selectAddresTitle"
+            android:textSize="@dimen/size_14dp"
+            android:textColor="@color/grey_transaprent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_selectAddresTitle"
+            android:background="@color/mediumGrey"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarDeliver"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_address_select"
+        android:scrollbars="none"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_above="@+id/custombtnConfirm" />
+
+            <LinearLayout
+                android:id="@+id/add_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rv_delivery_address"
+                android:layout_marginBottom="70dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:paddingLeft="20dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_add2"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Add New Address"
+                    android:textSize="@dimen/size_16dp"
+                    android:textColor="@color/green"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_address_select"
+        android:scrollbars="none">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_self_pickup_address"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <com.droidbond.loadingbutton.LoadingButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text="CONFIRM"
+        app:textSize="@dimen/size_18dp"
+        app:background="@color/green"
+        app:boldText="true"
+        app:textColor="@color/white"
+        app:progressColor="@color/white"
+        app:progressBarSize="small"
+        android:id="@+id/custombtnConfirm"
+        android:fontFamily="@font/rubik_medium"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rl_bottom">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:padding="@dimen/size_10dp"
+            android:text="CONFIRM"
+            android:textAllCaps="true"
+            android:textSize="@dimen/size_18dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/rubik_medium"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarSubmit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top"
+        android:layout_above="@+id/rl_bottom"
+        android:text="This product is not available for pick up"
+        android:id="@+id/tv_noOutlet"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_14dp"/>
+
+</RelativeLayout>

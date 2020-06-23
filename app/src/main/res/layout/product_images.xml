@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/product_images"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/apple_iphone"
+        android:paddingBottom="@dimen/margin_10dp"/>
+
+
+
+<!--    centerinside-->
+<!--    centerCrop-->
+
+</RelativeLayout>

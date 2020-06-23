@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".base_fragments.SettingsFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/background_top"
+        android:paddingTop="@dimen/margin_20dp"
+        android:paddingLeft="@dimen/margin_20dp"
+        android:paddingRight="@dimen/margin_20dp"
+        android:paddingBottom="@dimen/margin_10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_point"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wallet Balance"
+                android:textSize="@dimen/size_12dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/rubik_regular" />
+
+            <LinearLayout
+                android:id="@+id/section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <include
+                    layout="@layout/point_layout"/>
+
+                <!--<RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_solid_white"
+                        />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/white_circle_with_border"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13dp"
+                        android:text="PT"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp">
+
+                    <TextView
+                        android:id="@+id/wallet_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/size_20dp"
+                        android:text="45545"
+                        android:visibility="invisible"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_medium"/>
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarWalletBal"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        style="?android:attr/progressBarStyle"
+                        android:visibility="visible"
+                        android:indeterminateTint="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <!--<TextView
+                    android:id="@+id/wallet_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_20dp"
+                    android:text="4554545"
+                    android:visibility="invisible"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_medium"
+                    android:layout_marginLeft="@dimen/margin_10dp"/>
+                -->
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_below="@+id/edt_price"
+                android:layout_centerHorizontal="true"
+                android:text="*1 PT = 1 RM"
+                android:textAllCaps="true"
+                android:textSize="@dimen/size_9dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp">-->
+
+            <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                    android:id="@+id/profile_img"-->
+            <!--                    android:layout_width="95dp"-->
+            <!--                    android:layout_height="95dp"-->
+            <!--                    android:layout_centerInParent="true"-->
+            <!--                    android:src="@color/white" />-->
+
+            <!--                <ProgressBar-->
+            <!--                    android:id="@+id/progressBarMedium"-->
+            <!--                    style="?android:attr/progressBarStyle"-->
+            <!--                    android:layout_width="20dp"-->
+            <!--                    android:layout_height="20dp"-->
+            <!--                    android:layout_centerInParent="true"/>-->
+
+            <!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@color/white"
+                    android:scaleType="centerCrop"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBarMedium"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateTint="@color/colorPrimaryDark"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:text=""
+                android:id="@+id/user_name"
+                android:textSize="@dimen/size_12dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/rubik_regular" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_50dp">
+
+            <TextView
+                style="@style/TextViewSettingMyAccount"
+                android:text="My Account"
+                android:background="@color/backgroundColor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_13dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:paddingRight="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp">
+
+                <RelativeLayout
+                    android:id="@+id/tv_profileDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Profile Details" />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <RelativeLayout
+                    android:id="@+id/tv_changeNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Change Number" />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <RelativeLayout
+                    android:id="@+id/tv_addressBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Address Book" />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <RelativeLayout
+                    android:id="@+id/tv_refer"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Refer &amp; Earn " />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <RelativeLayout
+                    android:id="@+id/tv_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Notification" />
+
+                    <Switch
+                        android:id="@+id/switches"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:theme="@style/ThemeToogleTheme" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/margin_10dp"
+                style="@style/TextViewSettingMyAccount"
+                android:background="@color/backgroundColor"
+                android:text="Support"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_13dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:paddingRight="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp">
+
+                <RelativeLayout
+                    android:id="@+id/tv_contactUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Contact Us" />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <RelativeLayout
+                    android:id="@+id/tv_policies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="OK Express Policies" />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <RelativeLayout
+                    android:id="@+id/tv_rateUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        style="@style/TextViewSettingContent"
+                        android:text="Rate Us" />
+
+                    <ImageView
+                        style="@style/BackArrowGrey"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    style="@style/Rule"/>
+
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Logout"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/red"
+                    android:layout_marginRight="5dp"
+                    android:padding="@dimen/margin_10dp"
+                    android:textSize="@dimen/size_16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

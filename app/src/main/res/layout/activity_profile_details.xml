@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/background_top"
+        android:paddingTop="@dimen/margin_20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_left"
+            android:id="@+id/img_back"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_MyofferTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_back"
+            android:layout_centerVertical="true"
+            android:text="Profile Details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_tool"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerInParent="true"
+                android:src="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/progressBarMedium"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:indeterminateTint="@color/colorPrimaryDark"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            android:text="Edit your profile"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="Nickname" />
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:maxLength="30"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:imeOptions="actionNext" />
+
+        </RelativeLayout>
+
+        <View style="@style/View2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="Gender" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:visibility="invisible"
+                android:layout_marginRight="-15dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View style="@style/View2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="Birthday" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:maxLength="30"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:paddingRight="30dp"
+                android:imeOptions="actionNext" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_perm_contact_calendar_black_24dp"/>
+
+        </RelativeLayout>
+
+        <View style="@style/View2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-3dp"/>
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="20dp">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_centerVertical="true"-->
+        <!--                android:textColor="@color/black"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:fontFamily="@font/rubik_light"-->
+        <!--                android:text="Mobile Number" />-->
+
+        <!--            <EditText-->
+        <!--                android:id="@+id/phone_no"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:inputType="number"-->
+        <!--                android:layout_alignParentRight="true"-->
+        <!--                android:background="@null"-->
+        <!--                android:gravity="right"-->
+        <!--                android:textColor="@color/black"-->
+        <!--                android:textSize="16sp"-->
+        <!--                android:text=""-->
+        <!--                android:imeOptions="actionNext" />-->
+
+        <!--        </RelativeLayout>-->
+
+        <!--        <View style="@style/View2"-->
+        <!--            android:layout_marginBottom="5dp"-->
+        <!--            android:layout_marginLeft="-3dp"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:fontFamily="@font/rubik_light"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLength="35"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:imeOptions="actionDone" />
+
+        </RelativeLayout>
+
+        <View style="@style/View2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="-3dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="SAVE"
+        android:textSize="@dimen/size_18dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="@font/rubik_medium"
+        android:layout_alignParentBottom="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarSave"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

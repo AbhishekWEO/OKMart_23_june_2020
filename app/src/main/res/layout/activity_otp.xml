@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".activities.OTPActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:text="MOBILE VERIFICATION"
+            android:gravity="center"
+            style="@style/Headings" />
+
+        <TextView
+            android:text="Verification Code has been sent to"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            style="@style/SubHeadings" />
+
+        <TextView
+            android:id="@+id/phonenumber"
+            android:text=""
+            android:gravity="center"
+            style="@style/Headings" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/change_number"
+            android:text="Change number"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:layout_marginTop="10dp"
+            style="@style/SubHeadings" />
+
+        <TextView
+            android:text="Enter 6-digit code"
+            android:layout_marginTop="30dp"
+            style="@style/SubHeadings" />
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            app:bar_active_color="@color/white"
+            app:bar_enabled="true"
+            app:bar_height="2dp"
+            app:length="6"
+            app:otp_text_size="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verify"
+            style="@style/Button"
+            android:text="VERIFY"
+            android:layout_marginTop="40dp"
+            app:cornerRadius="50dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/did_not"
+            android:text="Didn't received the code? "
+            android:layout_toRightOf="@+id/checkbox"
+            android:layout_centerVertical="true"
+            style="@style/Terms"/>
+
+        <TextView
+            android:id="@+id/resend"
+            android:text="Resend Code"
+            android:layout_toRightOf="@+id/did_not"
+            android:layout_centerVertical="true"
+            android:textColor="@color/yellow"
+            style="@style/Terms" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

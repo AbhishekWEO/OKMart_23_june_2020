@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+<!--    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/backgroundColor">-->
+
+    <FrameLayout
+        android:id="@+id/fragment_container_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_with_shadow"
+        android:orientation="horizontal"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/footer">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+            app:labelVisibilityMode="labeled"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            app:menu="@menu/bottom_navigation_main" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-4dp"
+        android:layout_above="@+id/footer"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/border1"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:src="@drawable/border_top" />
+
+        <ImageView
+            android:id="@+id/border2"
+            android:layout_width="match_parent"
+            android:visibility="invisible"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:src="@drawable/border_top" />
+
+        <ImageView
+            android:id="@+id/border3"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:src="@drawable/border_top" />
+
+        <ImageView
+            android:id="@+id/border4"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:src="@drawable/border_top" />
+
+        <ImageView
+            android:id="@+id/border5"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:src="@drawable/border_top" />
+
+    </LinearLayout>
+
+</RelativeLayout>

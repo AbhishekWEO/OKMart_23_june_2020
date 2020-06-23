@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/flash_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="0dp">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#f2f2f2"/>
+
+        <ImageView
+            android:id="@+id/ic_flash"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/divider"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_flash" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ic_flash"
+            android:text="Flash Sale"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/rubik_medium"/>
+
+        <TextView
+            android:id="@+id/see_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:text="See More >"
+            android:textColor="@color/darkGrey2"
+            android:layout_marginRight="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="14dp"
+            android:fontFamily="@font/rubik_regular"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_flash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_below="@+id/ic_flash" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Featured"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flash_section"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/category"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_Featured">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f2f2f2"
+            android:padding="5dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarCategory"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="40dp"/>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager_product_category"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/category"
+        android:background="#f2f2f2" />
+
+    <RelativeLayout
+        android:id="@+id/rl_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:layout_below="@+id/pager_product_category">
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            app:dotsColor="@color/darkGrey"
+            app:dotsCornerRadius="4dp"
+            app:dotsSize="8dp"
+            app:dotsSpacing="3.5dp"
+            app:dotsWidthFactor="3"
+            android:background="#f2f2f2"
+            app:selectedDotColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_product"
+        android:layout_below="@+id/rl_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="100dp"/>
+
+    <!--    android:layout_marginBottom="100dp"-->
+
+    <ProgressBar
+        android:id="@+id/progressBarProduct"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateTint="@color/colorPrimaryDark"
+        android:layout_below="@+id/pager_product_category"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/top_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_10dp"
+                android:paddingTop="@dimen/margin_10dp"
+                android:paddingRight="@dimen/margin_10dp"
+                android:paddingBottom="@dimen/margin_10dp"
+                android:weightSum="3.5">
+
+                <TextView
+                    android:id="@+id/payment_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Successful recharged"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size_13dp" />
+
+                <TextView
+                    android:id="@+id/_seconds"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="25/11/2019"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size_13dp" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="RM 50.00"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size_13dp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/more"-->
+                    <!--                        android:layout_width="30dp"-->
+                    <!--                        android:layout_height="30dp"-->
+                    <!--                        android:rotation="90"-->
+                    <!--                        android:layout_alignParentRight="true"-->
+                    <!--                        android:src="@drawable/arrow_right"/>-->
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/less"-->
+                    <!--                        android:layout_width="30dp"-->
+                    <!--                        android:layout_height="30dp"-->
+                    <!--                        android:visibility="gone"-->
+                    <!--                        android:rotation="270"-->
+                    <!--                        android:layout_alignParentRight="true"-->
+                    <!--                        android:src="@drawable/arrow_right"/>-->
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/more2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/more"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:rotation="90"
+                    android:src="@drawable/arrow_right_light_grey" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/less2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/less"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:rotation="270"
+                    android:src="@drawable/arrow_right_light_grey"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top_section"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_card_holder_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Name on the card "
+                        android:textSize="@dimen/size_13dp" />
+
+                    <TextView
+                        android:id="@+id/card_holder_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="@dimen/size_13dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_txn_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Transaction ID"
+                        android:textSize="@dimen/size_13dp" />
+
+                    <TextView
+                        android:id="@+id/txn_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="@dimen/size_13dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_approval_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_approval_id_label_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Approval ID"
+                        android:textSize="@dimen/size_13dp" />
+
+                    <TextView
+                        android:id="@+id/approval_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="@dimen/size_13dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/cardtypeview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp">
+
+                    <TextView
+                        android:id="@+id/cardtype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Card Type "
+                        android:textSize="@dimen/size_13dp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/imgcard"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="-7dp"
+                        android:layout_toLeftOf="@+id/cardno"
+                        android:src="@drawable/card_mastercard"/>
+
+                    <TextView
+                        android:id="@+id/cardno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="@dimen/size_13dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/cardtypeview"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:weightSum="10">-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="5">-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/cardtype"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:layout_weight="5"-->
+                <!--                            android:text="Card Type"-->
+                <!--                            android:textSize="@dimen/size_13dp" />-->
+
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/imgcard"-->
+                <!--                            android:layout_width="60dp"-->
+                <!--                            android:layout_height="50dp"-->
+                <!--                            android:layout_below="@+id/cardtype"-->
+                <!--                            android:layout_centerHorizontal="true" />-->
+
+                <!--                    </RelativeLayout>-->
+
+                <!--                    <View-->
+                <!--                        android:layout_width="0.5dp"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_marginTop="5dp"-->
+                <!--                        android:layout_marginBottom="5dp"-->
+                <!--                        android:background="@color/grey" />-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="5">-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/cardfourdigit"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:layout_weight="5"-->
+                <!--                            android:text="Last 4 Digits"-->
+                <!--                            android:textSize="@dimen/size_13dp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/cardno"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_below="@+id/cardfourdigit"-->
+                <!--                            android:layout_centerHorizontal="true"-->
+                <!--                            android:layout_marginTop="15dp"-->
+                <!--                            android:layout_weight="5"-->
+                <!--                            android:text="XXXX XXXX XXXX"-->
+                <!--                            android:textSize="@dimen/size_13dp" />-->
+
+                <!--                    </RelativeLayout>-->
+
+                <!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/grey"/>
+
+</LinearLayout>

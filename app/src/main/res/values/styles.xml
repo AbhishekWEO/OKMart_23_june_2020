@@ -1,0 +1,212 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowFullscreen">true</item>-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/rubik_regular</item>
+    </style>
+
+
+
+    <style name="ThemeToogleTheme" parent="Theme.AppCompat.Light">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight, and colorSwitchThumbNormal. -->
+    </style>
+
+
+
+
+    <!--    Button-->
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint" tools:ignore="NewApi">@color/white</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingRight">50dp</item>
+        <item name="android:textColor">@color/maroon</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+
+    <!--    Headings-->
+    <style name="Headings">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22dp</item>
+
+<!--        <item name="android:fontFamily">@font/rubik_medium</item>-->
+    </style>
+
+    <!--    Sub Headings-->
+    <style name="SubHeadings">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <!--    Terms-->
+    <style name="Terms">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/rubik_light</item>
+    </style>
+
+    <!--    Signup Rule-->
+    <style name="View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background" >@color/white</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <!--    Address Rule-->
+    <style name="View2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background" >@color/grey</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+
+    <!--    Rule-->
+    <style name="Rule">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background" >@color/grey</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+
+    <!--    Signup TextView-->
+    <style name="TextViewSignUp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/rubik_light</item>
+    </style>
+
+    <!--    Signup Edittext-->
+    <style name="EditTextSignUp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">right</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+
+    <!--    Contact Edittext-->
+    <style name="EditTextContact">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11dp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!--   3 jan-->
+    <!--   Product Details-->
+    <style name="TextViewPhoneDetail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_14dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextViewPhonePrice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_5dp</item>
+        <item name="android:textSize">@dimen/size_17dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextViewPhoneFeatures">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_11dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+    <style name="TextViewSettingMyAccount">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/margin_20dp</item>
+        <item name="android:paddingTop">@dimen/margin_10dp</item>
+        <item name="android:paddingBottom">@dimen/margin_10dp</item>
+        <item name="android:textSize">@dimen/size_12dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+
+<!--    TextView Settings-->
+    <style name="TextViewSettingContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/size_16dp</item>
+        <item name="android:padding">@dimen/margin_10dp</item>
+<!--        <item name="android:drawableRight">@drawable/arrow_right</item>-->
+        <item name="android:fontFamily">@font/rubik_regular</item>
+    </style>
+
+
+<!--    Back Arrow Settings-->
+    <style name="BackArrowGrey">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:rotation">180</item>
+        <item name="android:src">@drawable/arrow_grey</item>
+    </style>
+
+
+    <style name="TextViewReload">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/size_18dp</item>
+        <item name="android:fontFamily">@font/rubik_medium</item>
+    </style>
+
+
+    <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+</resources>

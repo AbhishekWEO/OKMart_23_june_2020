@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.ChangeNumberActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/background_top"
+        android:paddingTop="@dimen/margin_10dp"
+        android:paddingRight="@dimen/margin_10dp"
+        android:id="@+id/rl_tool">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="@dimen/margin_10dp"
+            android:src="@drawable/arrow_left"
+            android:id="@+id/img_back"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            style="@style/TextViewReload"
+            android:layout_marginLeft="@dimen/margin_20dp"
+            android:text="Change Number"
+            android:layout_toRightOf="@+id/img_back"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_tool">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ll_main">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your mobile number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+919874569872"
+                    android:textSize="14dp"
+                    android:id="@+id/tv_mobNum"
+                    android:textColor="@color/black"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New mobile number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="MY +60 |  "
+                        android:textSize="14dp"
+                        android:id="@+id/tv_countryCode"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15dp"
+                        android:layout_toRightOf="@+id/tv_countryCode"
+                        android:layout_marginLeft="5dp"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:textSize="14dp"
+                        android:maxLength="10"
+                        android:background="@null"
+                        android:fontFamily="@font/rubik_light"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="-15dp"
+                        android:padding="@dimen/margin_15dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/img_edit"
+                        android:src="@drawable/ic_edit"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"/>
+
+
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/View"
+                    android:background="@color/black"
+                    android:id="@+id/tv_view_line"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_otp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:text="Enter 6-digit code"
+                    style="@style/SubHeadings"
+                    android:id="@+id/tv_digitCode"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:paddingLeft="@dimen/margin_15dp"
+                    android:paddingRight="@dimen/margin_15dp"/>
+
+                <in.aabhasjindal.otptextview.OtpTextView
+                    android:id="@+id/otp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    app:bar_active_color="@color/black"
+                    app:bar_enabled="true"
+                    app:bar_height="2dp"
+                    app:length="6"
+                    app:otp_text_size="20dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:id="@+id/rl_resend"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/did_not"
+                    android:text="Didn't received the code? "
+                    android:layout_toRightOf="@+id/checkbox"
+                    android:textSize="14dp"
+                    android:layout_centerVertical="true"
+                    style="@style/Terms"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_resend"
+                    android:text="Resend Code"
+                    android:layout_toRightOf="@+id/did_not"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp"
+                    style="@style/Terms" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        style="?android:attr/progressBarStyle"
+        android:visibility="visible"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_centerInParent="true"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rl_bottom">
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="update"
+            android:textAllCaps="true"
+            android:textSize="@dimen/size_18dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/rubik_medium"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarSubmit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:indeterminateTint="@color/white"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

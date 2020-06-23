@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10dp">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgcard"
+            android:src="@drawable/card_visa"
+            android:textColor="@color/black"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/imgcard"
+            android:layout_toLeftOf="@+id/checkbox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/carddetails"
+                android:text="xxxx-xxxx-xxxx-xxxx"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_expiredDate"
+                android:textColor="@color/mediumGrey"
+                android:text="Expires 08/22"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/checkbox"
+            android:button="@null"
+            android:background="@drawable/checkbox_selector"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/trash_icon"
+            android:layout_toLeftOf="@+id/checkbox"
+            android:id="@+id/cross"
+            android:layout_marginRight="@dimen/margin_10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

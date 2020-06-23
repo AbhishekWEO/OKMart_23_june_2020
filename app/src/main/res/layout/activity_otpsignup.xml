@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:text="MOBILE VERIFICATION"
+            android:gravity="center"
+            style="@style/Headings" />
+
+        <TextView
+            android:text="Verification Code has been sent to"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            style="@style/SubHeadings" />
+
+        <TextView
+            android:id="@+id/phonenumber"
+            android:text=""
+            android:gravity="center"
+            style="@style/Headings" />
+
+        <TextView
+            android:id="@+id/change_number"
+            android:text="Change number"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:layout_marginTop="10dp"
+            style="@style/SubHeadings" />
+
+        <TextView
+            android:text="Enter 6-digit code"
+            android:layout_marginTop="30dp"
+            style="@style/SubHeadings" />
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            app:bar_active_color="@color/white"
+            app:bar_enabled="true"
+            app:bar_height="2dp"
+            app:length="6"
+            app:otp_text_size="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:cardCornerRadius="@dimen/margin_20dp"
+            app:cardBackgroundColor="@color/white"
+            android:background="@color/white">
+
+
+            <com.droidbond.loadingbutton.LoadingButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="VERIFY"
+                app:background="@color/white"
+                app:textSize="16dp"
+                app:boldText="true"
+                app:textColor="@color/maroon"
+                app:progressColor="@color/maroon"
+                app:progressBarSize="small"
+                android:id="@+id/custombtn"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:visibility="visible"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/verify"
+                    android:text="VERIFY"
+                    android:textSize="@dimen/size_16dp"
+                    android:textColor="@color/maroon"
+                    android:visibility="visible"
+                    android:fontFamily="@font/rubik_medium"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBarVerify"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    style="?android:attr/progressBarStyle"
+                    android:visibility="invisible"
+                    android:indeterminateTint="@color/maroon"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:id="@+id/verify"
+            style="@style/Button"
+            android:text="VERIFY"
+            android:layout_marginTop="40dp"
+            app:cornerRadius="50dp"/>-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/did_not"
+            android:text="Didn't received the code? "
+            android:layout_toRightOf="@+id/checkbox"
+            android:layout_centerVertical="true"
+            style="@style/Terms"/>
+
+        <TextView
+            android:id="@+id/resend"
+            android:text="Resend Code"
+            android:layout_toRightOf="@+id/did_not"
+            android:layout_centerVertical="true"
+            android:textColor="@color/yellow"
+            style="@style/Terms" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

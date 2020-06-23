@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">OK Express</string>
+
+    <string name="something_went_wrong">Something went wrong, Please try again</string>
+
+    <string name="price">RM <b>1850.00</b></string>
+    <string name="strike_price"> <strike>RM <b>3999.00</b></strike></string>
+    <string name="huawei_price">RM <b>339.80</b></string>
+    <string name="huawei_strike_price"> <strike>RM <b>400.00</b></strike></string>
+
+    <string name="rm_50">(RM <b>50</b>)</string>
+    <string name="rm_100">(RM <b>100</b>)</string>
+    <string name="rm_500">(RM <b>500</b>)</string>
+    <string name="rm_1000">(RM <b>1,000)</b></string>
+
+
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_fromlib">Choose from Library</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_photo">Add Photo!</string>
+
+    <string name="skip">SKIP</string>
+
+    <string name="credit_card_debit_card">Credit Card/ Debit Card</string>
+    <string name="pay_now"><b>Pay Now</b></string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="rm">RM</string>
+    <string name="pt">PT</string>
+    <string name="select_your_banking_partner">Select your Banking Partner</string>
+    <string name="add_new_card">Add New Card</string>
+
+    <string name="expires">Expires</string>
+    <string name="other_payment_methods">Other Payment Methods</string>
+    <string name="online_banking">Online Banking</string>
+    <string name="please_select_your_address_for_product_delivery">Please select your address for product delivery.</string>
+    <string name="please_select_a_nearest_outlet_for_product_pickup">Please select a nearest outlet for product pickup</string>
+
+
+    <string name="shortcut_short_label_home">Home</string>
+    <string name="shortcut_long_label_home">Home</string>
+    <string name="shortcut_short_label_biddings">My bids</string>
+    <string name="shortcut_long_label_biddings">My bids</string>
+    <string name="shortcut_short_label_notifications">Notifications</string>
+    <string name="shortcut_long_label_notifications">Notifications</string>
+    <string name="shortcut_short_label_wallet">Wallet</string>
+    <string name="shortcut_long_label_wallet">Wallet</string>
+    <string name="shortcut_short_label_settings">Settings</string>
+    <string name="shortcut_long_label_settings">Settings</string>
+
+
+    <string name="shortcut_short_label_login">Login</string>
+    <string name="shortcut_long_label_login">Login</string>
+
+    <string name="shortcut_short_label_signup">Signup</string>
+    <string name="shortcut_long_label_signup">Signup</string>
+
+</resources>

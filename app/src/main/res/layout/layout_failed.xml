@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="27-10-2019 12:10"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/image_thumbnail"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_img"
+            android:layout_width="90dp"
+            android:layout_height="90dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple Iphones XS 64GB"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/rm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/product_name"
+                android:text="Failed Offer"
+                android:textColor="@color/colorPrimary"
+                android:textSize="11dp"/>
+
+            <TextView
+                android:id="@+id/bid_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rm"
+                android:fontFamily="@font/rubik_medium"
+                android:text="RM 1699.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/bid_price">
+
+                <TextView
+                    android:id="@+id/current_price"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RM 1859.00"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/actual_price"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RM 3000.00"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/progress"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_divider"
+        android:background="@color/mediumGrey"/>
+
+</LinearLayout>

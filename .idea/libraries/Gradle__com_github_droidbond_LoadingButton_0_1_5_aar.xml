@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.droidbond:LoadingButton:0.1.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53dc7cc3108043bf22c3b80ef18b8a1b/jetified-LoadingButton-0.1.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53dc7cc3108043bf22c3b80ef18b8a1b/jetified-LoadingButton-0.1.5/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_top"
+        android:paddingTop="@dimen/margin_20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_left"
+            android:id="@+id/img_back"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_MyofferTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_back"
+            android:layout_centerVertical="true"
+            android:text="Invite &amp; Earn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_tool">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Invite your friends to OK Express and"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/size_18dp"/>
+
+            <TextView
+                android:id="@+id/earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Earn 10 PT"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/size_20dp"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/refer"/>
+
+            <TextView
+                android:id="@+id/you_will_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/size_14dp"/>
+
+            <RelativeLayout
+                android:id="@+id/referral_copy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/dotted_outline">
+
+                <TextView
+                    android:id="@+id/referred_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="ABCD1234"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/size_18dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_copy"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/send_invites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_solid_primary_bottom_corners"
+                android:padding="10dp"
+                android:text="SEND INVITES"
+                android:textSize="@dimen/size_18dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/rubik_medium"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="The more friends you invite the more you earn!"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/size_14dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

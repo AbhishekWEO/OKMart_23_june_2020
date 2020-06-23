@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginLeft="-10dp"
+    android:layout_marginRight="-10dp"
+    android:layout_marginBottom="-10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10dp"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:paddingRight="@dimen/margin_15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wallet Balance"
+                android:textSize="@dimen/size_14dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/rubik_regular"/>
+
+            <RelativeLayout
+                android:layout_alignParentRight="true"
+                android:id="@+id/section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_solid_white_max_radius">
+
+                <include
+                    android:id="@+id/points_layout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    layout="@layout/points_layout" />
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="0dp"
+                    android:layout_toRightOf="@+id/points_layout"
+                    android:layout_centerVertical="true"
+                    android:text="1800.00"
+                    android:textSize="@dimen/size_18dp"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:id="@+id/rl_bid"
+                android:layout_below="@+id/section"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/rectangle"
+                    android:background="@drawable/rounded_solid_primary_max_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_bidPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/rubik_medium"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="12789.02 RM"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_seekBar"
+                    android:layout_below="@+id/rectangle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp">
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="20dp"
+                        android:maxHeight="15dp"
+                        android:progressDrawable="@drawable/seekbar_drawable_progress"
+                        android:layout_marginBottom="10dp"
+                        android:splitTrack="false"
+                        android:progress="0"
+                        android:progressTint="@color/colorPrimary"
+                        android:thumb="@drawable/seek_bar_slider"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekBar"
+                        android:text="1710.00 RM"
+                        android:id="@+id/tv_currentPrice"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginLeft="@dimen/margin_15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekBar"
+                        android:text="2230.00 RM"
+                        android:id="@+id/tv_directPrice"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_15dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_50dp">
+
+            <TextView
+                android:id="@+id/tv_placeBid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/size_10dp"
+                android:text="Place new Bid"
+                android:textAllCaps="true"
+                android:textSize="@dimen/size_18dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/rubik_medium"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                style="?android:attr/progressBarStyle"
+                android:visibility="gone"
+                android:indeterminateTint="@color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

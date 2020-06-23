@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:background="@color/notification_grey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Items watcing for your action"/>
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading"
+                android:layout_marginTop="3dp"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:text="Dear value customer, please proceed your item in successful tab under my offers"/>
+
+            <TextView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:textSize="13dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimary"
+                android:text="Clear" />
+
+            <ProgressBar
+                android:id="@+id/progressBarClear"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/message"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:visibility="invisible"
+                style="?android:attr/progressBarStyle"
+                android:indeterminateTint="@color/colorPrimaryDark"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:background="@color/mediumGrey"/>
+
+</LinearLayout>

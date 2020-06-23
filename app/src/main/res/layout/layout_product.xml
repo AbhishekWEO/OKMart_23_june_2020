@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="0dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/white"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBarProduct"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    style="?android:attr/progressBarStyle"
+                    android:indeterminateTint="@color/colorPrimaryDark"
+                    android:layout_centerInParent="true"/>
+
+                <RelativeLayout
+                    android:id="@+id/background_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:paddingLeft="@dimen/margin_10dp"
+                    android:paddingRight="@dimen/margin_10dp"
+                    android:background="@drawable/rounded_solid_primary_dark_two">
+
+                    <ImageView
+                        android:id="@+id/ic_arrow_down"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/ic_arrow_down"/>
+
+                    <TextView
+                        android:id="@+id/product_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ic_arrow_down"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Starting in"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerVertical="true"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_timer"
+                        android:layout_toRightOf="@+id/product_status"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/margin_5dp"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/tv_hour"
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"
+                            android:padding="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_hour"
+                            android:text=":"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:textSize="13dp"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/tv_min"
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:textSize="13dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:padding="2dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tv_min"
+                            android:text=":"
+                            android:textSize="13dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/tv_sec"
+                            android:layout_width="22dp"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:textSize="13dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_above="@+id/tv_quantity">
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Huawi Nova 5T 8GB+128GB Black Edition"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/rubik_regular"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/product_name"
+                        android:layout_above="@+id/rl_timer"
+                        android:id="@+id/rl_price"
+                        android:layout_marginTop="5dp">
+
+                        <!--                        <RelativeLayout-->
+                        <!--                            android:layout_width="25dp"-->
+                        <!--                            android:layout_height="25dp"-->
+                        <!--                            android:id="@+id/rl_arrow"-->
+                        <!--                            android:background="@drawable/circle_solid_white">-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:id="@+id/imgarrow1"-->
+                        <!--                                android:src="@drawable/arrow_down"-->
+                        <!--                                android:layout_centerHorizontal="true"-->
+                        <!--                                android:layout_alignParentBottom="true"/>-->
+
+                        <!--                        </RelativeLayout>-->
+
+
+                        <TextView
+                            android:id="@+id/current_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rm"
+                            android:text="@string/huawei_price"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:fontFamily="@font/rubik_medium"/>
+
+                        <TextView
+                            android:id="@+id/rm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@+id/rl_arrow"
+                            android:text="RM "
+                            android:textSize="12dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <TextView
+                            android:id="@+id/s_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rl_arrow"
+                            android:layout_below="@+id/current_price"
+                            android:text="@string/huawei_strike_price"
+                            android:textColor="@color/grey_transaprent"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl_timer"
+                        android:layout_alignParentBottom="true">
+
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/product_status"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_toLeftOf="@+id/ll_timer"-->
+                        <!--                            android:text=""-->
+                        <!--                            android:textColor="@color/white"-->
+                        <!--                            android:textSize="11dp"-->
+                        <!--                            android:fontFamily="@font/rubik_regular"-->
+                        <!--                            android:layout_centerVertical="true"/>-->
+                        <!--                        android:textSize="8dp"-->
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:id="@+id/ll_timer"-->
+                        <!--                            android:layout_alignParentRight="true"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:orientation="horizontal"-->
+                        <!--                            android:paddingLeft="3dp"-->
+                        <!--                            android:weightSum="3">-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="22dp"-->
+                        <!--                                android:layout_height="match_parent"-->
+                        <!--                                android:text="00"-->
+                        <!--                                android:id="@+id/tv_hour"-->
+                        <!--                                android:layout_marginLeft="2dp"-->
+                        <!--                                android:layout_centerVertical="true"-->
+                        <!--                                android:layout_gravity="center_vertical"-->
+                        <!--                                android:gravity="center"-->
+                        <!--                                android:textSize="18dp"-->
+                        <!--                                android:textColor="@android:color/black"-->
+                        <!--                                android:fontFamily="@font/bebas_neue_bold"-->
+                        <!--                                android:background="@drawable/rounded_rect"-->
+                        <!--                                android:padding="2dp" />-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_toRightOf="@+id/tv_hour"-->
+                        <!--                                android:layout_marginLeft="2dp"-->
+                        <!--                                android:text=":"-->
+                        <!--                                android:layout_centerVertical="true"-->
+                        <!--                                android:layout_gravity="center_vertical"-->
+                        <!--                                android:gravity="center_vertical"-->
+                        <!--                                android:textColor="@color/white"/>-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="22dp"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:text="00"-->
+                        <!--                                android:id="@+id/tv_min"-->
+                        <!--                                android:layout_marginLeft="2dp"-->
+                        <!--                                android:layout_centerVertical="true"-->
+                        <!--                                android:layout_gravity="center"-->
+                        <!--                                android:textSize="18dp"-->
+                        <!--                                android:gravity="center"-->
+                        <!--                                android:textColor="@android:color/black"-->
+                        <!--                                android:fontFamily="@font/bebas_neue_bold"-->
+                        <!--                                android:background="@drawable/rounded_rect"-->
+                        <!--                                android:padding="2dp"/>-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_toRightOf="@+id/tv_min"-->
+                        <!--                                android:layout_marginLeft="2dp"-->
+                        <!--                                android:text=":"-->
+                        <!--                                android:layout_centerVertical="true"-->
+                        <!--                                android:layout_gravity="center_vertical"-->
+                        <!--                                android:gravity="center_vertical"-->
+                        <!--                                android:textColor="@color/white"/>-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="22dp"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:text="00"-->
+                        <!--                                android:id="@+id/tv_sec"-->
+                        <!--                                android:layout_marginLeft="2dp"-->
+                        <!--                                android:layout_centerVertical="true"-->
+                        <!--                                android:layout_gravity="center"-->
+                        <!--                                android:textSize="18dp"-->
+                        <!--                                android:gravity="center"-->
+                        <!--                                android:textColor="@android:color/black"-->
+                        <!--                                android:fontFamily="@font/bebas_neue_bold"-->
+                        <!--                                android:background="@drawable/rounded_rect"-->
+                        <!--                                android:padding="2dp"/>-->
+
+                        <!--                        </LinearLayout>-->
+
+                    </RelativeLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBarBottom"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"
+                        style="?android:attr/progressBarStyle"
+                        android:indeterminateTint="@color/white"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="gone"
+                    android:id="@+id/tv_quantity"
+                    android:background="@drawable/quantity_count"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_11dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

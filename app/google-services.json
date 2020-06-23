@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "755812363701",
+    "firebase_url": "https://ok-mart-app.firebaseio.com",
+    "project_id": "ok-mart-app",
+    "storage_bucket": "ok-mart-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755812363701:android:d56ce6d66a25a298",
+        "android_client_info": {
+          "package_name": "com.okmart.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755812363701-b1rg2oooeouq8fhud18621vae6mq6tjc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxjGC62j-5fvf5-e45YxtT3L7Xb1JbZOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755812363701-b1rg2oooeouq8fhud18621vae6mq6tjc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

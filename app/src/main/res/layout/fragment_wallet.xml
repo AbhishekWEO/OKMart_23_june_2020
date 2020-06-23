@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".base_fragments.WalletFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_20dp"
+        android:paddingTop="@dimen/margin_20dp"
+        android:paddingRight="@dimen/margin_20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
+                    android:src="@color/white" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/colorPrimaryDark" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_vertical"
+                android:text="Michael Lim"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_15dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="My Wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_wallet"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--            <include-->
+            <!--                android:id="@+id/include_point"-->
+            <!--                layout="@layout/point_layout"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_centerVertical="true" />-->
+
+            <ImageView
+                android:id="@+id/include_point"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_points" />
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_toRightOf="@+id/include_point"
+                android:layout_toLeftOf="@+id/refer_earn">
+
+                <TextView
+                    android:id="@+id/wallet_balance"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_20dp" />
+                <ProgressBar
+                    android:id="@+id/progressBarWalletBal"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    style="?android:attr/progressBarStyle"
+                    android:visibility="visible"
+                    android:indeterminateTint="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+
+            <ImageView
+                android:id="@+id/refer_earn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_reload"
+                android:src="@drawable/ic_gift"/>
+
+            <TextView
+                android:id="@+id/tv_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:background="@drawable/rounded_solid_white"
+                android:paddingLeft="@dimen/margin_20dp"
+                android:paddingTop="@dimen/margin_5dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="@dimen/margin_5dp"
+                android:text="Reload Wallet"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp" />
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/tv_reload"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:layout_marginTop="@dimen/margin_5dp"-->
+            <!--                android:layout_marginRight="@dimen/margin_5dp"-->
+            <!--                android:background="@drawable/rounded_solid_white_max_radius"-->
+            <!--                android:paddingLeft="@dimen/margin_20dp"-->
+            <!--                android:paddingTop="@dimen/margin_5dp"-->
+            <!--                android:paddingRight="20dp"-->
+            <!--                android:paddingBottom="@dimen/margin_5dp"-->
+            <!--                android:text="Reload"-->
+            <!--                android:textColor="@color/colorPrimary"-->
+            <!--                android:textSize="14dp" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/price_pt"-->
+            <!--                android:layout_width="20dp"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                android:layout_alignParentRight="true"-->
+            <!--                android:background="@drawable/circle_solid_white"-->
+            <!--                android:src="@drawable/ic_add" />-->
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/one_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_points"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:fontFamily="@font/rubik_regular"
+            android:background="@drawable/rounded_solid_maroon"
+            android:text="1 PT is equivalent to 1 Ringgit Malaysia (RM)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_11dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_rechargeHistory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Reload History"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_15dp" />
+
+                <ImageView
+                    android:id="@+id/recharge_dot_image"
+                    android:layout_width="140dp"
+                    android:layout_height="5dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/line"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_refund"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_refund"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Purchase &amp; Refund"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_15dp" />
+
+                <ImageView
+                    android:id="@+id/refund_dot_image"
+                    android:layout_width="140dp"
+                    android:layout_height="5dp"
+                    android:layout_marginBottom="-2dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/line"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_tool">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rechargeHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_5dp"
+            tools:listitem="@layout/layout_recharge_history"
+            android:paddingBottom="70dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_tool"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_purchaseRefund"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:paddingBottom="70dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/no_rechargehistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/no_purchaserefund"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+</RelativeLayout>

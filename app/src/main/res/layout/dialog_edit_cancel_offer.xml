@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/rounded_solid_white">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/rubik_medium"
+        android:textColor="@color/colorPrimary"
+        android:text="EDIT"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:text="You can change offer price"
+        android:textSize="14dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+    <View
+        android:id="@+id/rule"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/message"
+        style="@style/Rule"/>
+
+    <TextView
+        android:id="@+id/edit_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rule"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="@color/colorPrimary"
+        android:text="EDIT OFFER"/>
+
+    <View
+        android:id="@+id/rule1"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/edit_offer"
+        style="@style/Rule"/>
+
+    <TextView
+        android:id="@+id/cancel_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rule1"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="@color/colorPrimary"
+        android:text="CANCEL OFFER"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/rule2"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/cancel_offer"
+        style="@style/Rule"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/go_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rule2"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:text="GO BACK"/>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:paddingBottom="5dp"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_thumbnail"
+        android:paddingTop="100dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="-70dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_solid_white">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth Speaker"
+            android:textSize="14dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:textColor="@color/purple"
+            android:text="Congratulations!"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="You've just won this item with a bid of "
+            android:textSize="14dp"
+            android:gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_speaker"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_speaker"/>
+
+            <TextView
+                android:id="@+id/bid_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ic_speaker"
+                android:text="@string/huawei_price"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/rubik_medium"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="Share"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/rubik_medium"
+            android:background="@drawable/rounded_solid_primary_dark"/>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Close"
+            android:textSize="14dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/flyers"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_thumbnail"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@color/orange"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"/>
+
+</RelativeLayout>
